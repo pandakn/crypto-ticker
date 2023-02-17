@@ -8,10 +8,13 @@ import json
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap, QImage, QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidget, QTableWidgetItem, QComboBox, QLabel
+from speech import audio
 
 engine = pyttsx3.init()
 
 language = 'th'
+
+a = audio()
 
 class CryptoDisplay(QMainWindow):
     def __init__(self):
@@ -66,16 +69,16 @@ class CryptoDisplay(QMainWindow):
 
             print(my_text)
 
-            my_obj = gTTS(text=my_text, lang=language, slow=False)
-            my_obj.save("coin.mp3")
-            # playsound("coin.mp3")
-            pygame.init()
-            pygame.mixer.init()
+            # my_obj = gTTS(text=my_text, lang=language, slow=False)
+            # my_obj.save("coin.mp3")
+            # # playsound("coin.mp3")
+            # pygame.init()
+            # pygame.mixer.init()
 
-            filename = "coin.mp3"
+            # filename = "coin.mp3"
 
-            pygame.mixer.music.load(filename)
-            pygame.mixer.music.play()
+            # pygame.mixer.music.load(filename)
+            # pygame.mixer.music.play()
 
             while pygame.mixer.music.get_busy():
                 pygame.time.Clock().tick(10)

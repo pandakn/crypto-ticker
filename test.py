@@ -4,6 +4,7 @@ import json
 from PyQt5.QtWidgets import QApplication, QWidget, QGridLayout, QLabel
 from PyQt5.QtGui import QImage, QPixmap, QIcon, QFont
 
+
 class CryptoCard(QLabel):
     def __init__(self, symbol, price, logo_url, parent=None):
         super().__init__(parent)
