@@ -14,7 +14,7 @@ def audio():
       audio = r.listen(source)
 
       #print(audio)
-      data = r.recognize_google(audio)
+      data = r.recognize_google(audioม language='th')
       print(data)
     return data     
      
